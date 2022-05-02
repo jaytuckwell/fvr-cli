@@ -1,0 +1,18 @@
+#!/usr/bin/env php
+<?php
+
+$root = dirname(__DIR__);
+
+if(!is_file(sprintf('%s/vendor/autoload.php', $root))) {
+    $root = dirname(__DIR__, 4);
+}
+
+require sprintf('%s/vendor/autoload.php', $root);
+
+use Fever\Cli\Commands\Play;
+use Symfony\Component\Console\Application;
+
+$application = new Application('Fever CLI', '1.0.0');
+
+$application->add(new Play());
+$application->run();

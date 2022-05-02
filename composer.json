@@ -1,0 +1,24 @@
+{
+    "name": "thisisfever/cli",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Fever\\Cli\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jay Tuckwell",
+            "email": "jay.tuckwell@thisisfever.co.uk"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^8.0",
+        "symfony/console": "^5.0|^6.0"
+    },
+    "bin": [
+        "bin/fvr"
+    ]
+}
